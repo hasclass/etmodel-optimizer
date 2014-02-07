@@ -4,3 +4,5 @@ A genetic algorithm to find a close-to-optimal solution for [http://light.et-mod
 
 
     ruby optimizer.rb
+
+Configure settings in `etlight.yml`.
