@@ -1,0 +1,27 @@
+---
+inputs:
+- households_insulation_level_old_houses
+- households_lighting_led_electricity_share
+- transport_car_using_electricity_share
+- households_water_heater_fuel_cell_chp_network_gas_share
+- households_space_heater_heatpump_ground_water_electricity_share
+- households_water_heater_solar_thermal_share
+- number_of_energy_power_ultra_supercritical_coal
+- number_of_energy_power_combined_cycle_network_gas
+- number_of_energy_power_nuclear_gen3_uranium_oxide
+- number_of_energy_power_wind_turbine_offshore
+- households_solar_pv_solar_radiation_market_penetration
+- green_gas_total_share
+
+fixed:
+  number_of_energy_power_supercritical_coal: 0
+  households_behavior_standby_killer_turn_off_appliances: 0
+  number_of_energy_power_ultra_supercritical_network_gas: 4.82828
+  households_water_heater_micro_chp_network_gas_share: 0
+  number_of_energy_power_wind_turbine_inland: 419.58
+
+fitness: etflex_score
+population:     30
+mutation_rate:  0.12
+breed_mutate:   0.4
+
