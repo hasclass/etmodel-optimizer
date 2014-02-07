@@ -36,6 +36,11 @@ class Optimizer
   end
 end
 
+
+# A population contains a set of genes.
+# Evolving a population will create a new population
+# and select the fittest and cross-breeds the gene_pool.
+#
 class Population
   attr_reader :inputs, :genes
 
@@ -105,7 +110,16 @@ class Population
 end
 
 
-# A gene holds settings for every input.
+# A gene holds settings for every input and represents the state
+# of a single solution (every slider position).
+#
+# @example
+#    g = Gene.new({"input-key" => 2.3, "input-key-2" => 4.0})
+#    g.calculate_fitness # => 300
+#    g.breed(other_gene)
+#    # => a new Gene with settings from self and other
+#    g.mutate! # randomly mutate's settings
+#
 class Gene
   attr_reader :properties, :fitness
 
@@ -176,7 +190,13 @@ class Gene
   end
 end
 
-
+# Input represents a slider in the etmodel.
+#
+# @example
+#     Input.load(["input-key", "input-key-2"])
+#     Input["input-key"].random_value
+#     => 3.0 (a random value within input min, max range)
+#
 class Input
   attr_reader   :id, :min, :max, :step, :value, :steps
 
