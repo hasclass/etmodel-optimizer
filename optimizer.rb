@@ -91,16 +91,12 @@ class Population
     Population.new(genes.map(&:dup), @count)
   end
 
-protected
-
   # fittest genes first
   def genes_sorted_by_fitness
     @genes.sort_by(&:fitness).reverse
   end
 
   # -- Class methods ------------------------------------
-
-public
 
   def self.seed(inputs, count = 10)
     genes = count.times.map { Gene.new(inputs).tap(&:seed) }
