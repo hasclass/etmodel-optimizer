@@ -21,7 +21,7 @@ fixed:
   number_of_energy_power_wind_turbine_inland: 419.58
 
 fitness: etflex_score
-population:     30
+population:     15
 mutation_rate:  0.12
 breed_mutate:   0.4
 
